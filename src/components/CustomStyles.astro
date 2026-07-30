@@ -1,63 +1,58 @@
 ---
 import '@fontsource-variable/inter';
-
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
+import '@fontsource-variable/space-grotesk';
 ---
 
 <style is:inline>
   :root {
     --aw-font-sans: 'Inter Variable';
     --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-heading: 'Space Grotesk Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* EIKON brand palette */
+    --aw-color-primary: rgb(225 45 45);      /* bold red #E12D2D */
+    --aw-color-secondary: rgb(195 25 25);    /* deeper red for hover */
+    --aw-color-accent: rgb(45 45 45);        /* charcoal #2D2D2D */
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
+    --aw-color-text-heading: rgb(20 20 20);  /* near-black #141414 */
+    --aw-color-text-default: rgb(20 20 20);
+    --aw-color-text-muted: rgb(135 135 150); /* steel grey #878796 */
     --aw-color-bg-page: rgb(255 255 255);
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    --aw-color-bg-page-dark: rgb(20 20 20);
+
+    /* Brand geometry tokens */
+    --aw-color-charcoal: rgb(45 45 45);
+    --aw-color-steel: rgb(135 135 150);
 
     ::selection {
-      background-color: lavender;
+      background-color: rgb(225 45 45 / 20%);
     }
   }
 
   .dark {
     --aw-font-sans: 'Inter Variable';
     --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-heading: 'Space Grotesk Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: rgb(225 45 45);
+    --aw-color-secondary: rgb(195 25 25);
+    --aw-color-accent: rgb(135 135 150);
 
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+    --aw-color-text-heading: rgb(248 248 248);
+    --aw-color-text-default: rgb(220 220 224);
+    --aw-color-text-muted: rgb(135 135 150);
+    --aw-color-bg-page: rgb(20 20 20);
 
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: rgb(225 45 45 / 35%);
+      color: white;
     }
+  }
+
+  /* Apply heading font globally */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 </style>
