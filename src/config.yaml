@@ -1,6 +1,6 @@
 site:
-  name: EIKON Guyana Inc.
-  site: 'https://eikonguyanaInc.com'
+  name: AstroWind
+  site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: EIKON Guyana Inc.
-    template: '%s — EIKON Guyana Inc.'
-  description: "Innovative Ideas, Solutions & Results. Engineering, construction, and green energy solutions for Guyana and the Caribbean."
+    default: AstroWind
+    template: '%s — AstroWind'
+  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: EIKON Guyana Inc.
+    site_name: AstroWind
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@eikonguyanaInc'
-    site: '@eikonguyanaInc'
+    handle: '@arthelokyo'
+    site: '@arthelokyo'
     cardType: summary_large_image
 
 i18n:
@@ -38,25 +38,25 @@ apps:
 
     post:
       isEnabled: true
-      permalink: '/%slug%'
+      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 
     list:
       isEnabled: true
-      pathname: 'blog'
+      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
       robots:
         index: true
 
     category:
       isEnabled: true
-      pathname: 'category'
+      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
       robots:
         index: true
 
     tag:
       isEnabled: true
-      pathname: 'tag'
+      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
       robots:
         index: false
 
@@ -66,7 +66,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: null
+      id: null # or "G-XXXXXXXXXX"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
