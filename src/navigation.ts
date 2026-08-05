@@ -25,14 +25,14 @@ export const footerData = {
     {
       title: 'Solutions',
       links: [
-        { text: 'Power Generation', href: '/services#power-generation' },
+        { text: 'Engineering Design & Consultancy', href: '/services#engineering-design' },
+        { text: 'Power Generation Solutions', href: '/services#power-generation' },
         { text: 'Highway & Road Construction', href: '/services#highway-road-construction' },
         { text: 'Building Design & Construction', href: '/services#building-design-construction' },
         { text: 'Net-Zero Solar & Wind', href: '/services#net-zero-solar-wind' },
+        { text: 'Schools & Public Infrastructure', href: '/services#schools-public-infrastructure' },
         { text: 'Drainage & Irrigation', href: '/services#drainage-irrigation' },
-        { text: 'Water Distribution', href: '/services#water-distribution' },
-        { text: 'Engineering & Design', href: '/services#engineering-design' },
-        { text: 'Project Management', href: '/services#project-management' },
+        { text: 'Water Distribution & Wells', href: '/services#water-distribution' },
       ],
     },
     {
