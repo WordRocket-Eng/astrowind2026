@@ -1,0 +1,233 @@
+---
+import { Icon } from 'astro-icon/components';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const certifications = [
+  'Caterpillar Marine Analyst Certification',
+  'MCS Combine Controls',
+  'Caterpillar Heavy Duty Machinery Service Fundamentals',
+  '3500 Alternator and Engine Maintenance',
+  'CAT Electric Power III',
+  'Marine Engine Systems Troubleshooting',
+  'Marine Installation & Diagnostics',
+  '3500 Engine Repair',
+  'Electronic Troubleshooting',
+  'CEP II',
+];
+
+const skills = [
+  {
+    title: 'Electrical Troubleshooting',
+    description: 'Diagnosing and resolving electrical faults across generator systems and power infrastructure.',
+    icon: 'tabler:tools',
+  },
+  {
+    title: 'Breaker Repair & Automatic Switch Gear',
+    description: 'Repairing breakers and building and wiring automatic switch gear for generator control systems.',
+    icon: 'tabler:plug',
+  },
+  {
+    title: 'PLC Repair & Programming',
+    description: 'Repairing and programming Programmable Logic Controllers for industrial power applications.',
+    icon: 'tabler:cpu',
+  },
+  {
+    title: 'EASYGEN / PROFACE / DEEPSEA Controllers',
+    description: 'Installing and configuring generator controller systems across EASYGEN, PROFACE, and DEEPSEA platforms.',
+    icon: 'tabler:settings-2',
+  },
+  {
+    title: 'Alternator Troubleshooting & Repair',
+    description: 'Troubleshooting and repairing alternators to restore and maintain generator output.',
+    icon: 'tabler:bolt',
+  },
+];
+
+const gplScope = [
+  {
+    title: 'Regular Performance Checks',
+    description: 'Routine inspections and performance monitoring on generating plant and equipment to ensure reliable operation.',
+    icon: 'tabler:gauge',
+  },
+  {
+    title: 'Troubleshooting & Root Cause Analysis',
+    description: 'Systematic diagnosis of failures, alarms, and fault codes — identifying root causes and implementing corrective action.',
+    icon: 'tabler:search',
+  },
+  {
+    title: 'Engine & Auxiliary Calibration',
+    description: 'Calibrating engines and auxiliaries to OEM standards, maintaining performance and reliability across the generator fleet.',
+    icon: 'tabler:tools',
+  },
+  {
+    title: 'Immediate Response Capability',
+    description: 'Rapid deployment when generator malfunctions or shutdowns threaten grid stability — diagnosing faults and returning units to service with minimal downtime.',
+    icon: 'tabler:alert-triangle',
+  },
+];
+
+const metadata = {
+  title: 'Capabilities',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Header ******************* -->
+
+  <Hero>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-primary"></div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="title">Capabilities</Fragment>
+    <Fragment slot="subtitle">
+      Proven expertise in power generation supervision, backed by decades of hands-on experience.
+    </Fragment>
+  </Hero>
+
+  <!-- GPL Case Study ******************* -->
+
+  <section class="relative not-prose scroll-mt-[72px]">
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-slate-900/30 border-t border-gray-200 dark:border-slate-700"></div>
+    </Fragment>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div class="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
+        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Case Study</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tighter leading-tighter mb-4">
+          Generation Supervisory Service<br />for Guyana Power and Light
+        </h2>
+        <p class="text-lg text-muted dark:text-slate-400 leading-relaxed">
+          EIKON Guyana Inc. provides specialized Generation Supervisory Services to Guyana Power and Light (GPL),
+          leveraging over 40 years of combined experience in electrical power generation and marine analysis.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+        {
+          gplScope.map((item) => (
+            <div class="relative flex flex-col rounded-lg shadow-lg dark:shadow-none dark:border dark:border-slate-600 bg-white dark:bg-slate-900 p-6 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+              <div class="flex justify-center mb-4">
+                <Icon name={item.icon} class="bg-primary h-12 w-12 p-3 rounded-full text-white" />
+              </div>
+              <h3 class="font-bold text-lg md:text-xl mb-2">{item.title}</h3>
+              <p class="text-muted dark:text-slate-400 leading-relaxed">{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Personnel ******************* -->
+
+  <section class="relative not-prose scroll-mt-[72px] bg-[#141414]">
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div class="text-center mb-10">
+        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Key Personnel</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tighter leading-tighter text-white">
+          Specialists on the Ground
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+        <div class="rounded-lg border border-slate-600 bg-slate-900/50 p-6 md:p-8 text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-5">
+            <Icon name="tabler:user" class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-2">Celesto Carr</h3>
+          <p class="text-primary font-semibold text-sm uppercase tracking-wide mb-3">
+            Electrical Power Generation and Marine Analyst Contractor
+          </p>
+          <p class="text-gray-300 leading-relaxed">
+            Provides expert-level diagnostics and repair oversight on GPL's generator fleet, backed by Caterpillar
+            Marine Analyst certification.
+          </p>
+        </div>
+
+        <div class="rounded-lg border border-slate-600 bg-slate-900/50 p-6 md:p-8 text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-5">
+            <Icon name="tabler:user" class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white mb-2">Patrick Rose</h3>
+          <p class="text-primary font-semibold text-sm uppercase tracking-wide mb-3">
+            Mechanical and Electrical Power Generator Technician
+          </p>
+          <p class="text-gray-300 leading-relaxed">
+            Brings 38 years of hands-on experience in mechanical and electrical power generator systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications ******************* -->
+
+  <section class="relative not-prose scroll-mt-[72px] border-t border-gray-200 dark:border-slate-700">
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div class="text-center mb-10">
+        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Certifications</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tighter leading-tighter">
+          Factory-Trained &amp; Certified
+        </h2>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-3 md:gap-4 max-w-4xl mx-auto">
+        {
+          certifications.map((cert) => (
+            <div class="inline-flex items-center gap-2.5 rounded-full border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-4 py-2.5 md:px-5 md:py-3 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+              <Icon name="tabler:certificate" class="w-5 h-5 text-primary flex-none" />
+              <span class="text-sm md:text-base font-medium text-default dark:text-slate-200">{cert}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Skills ******************* -->
+
+  <section class="relative not-prose scroll-mt-[72px] bg-gray-50 dark:bg-slate-900/30 border-t border-gray-200 dark:border-slate-700">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div class="text-center mb-10 md:mb-14">
+        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Key Skills</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tighter leading-tighter">
+          Technical Capabilities
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+        {
+          skills.map((skill) => (
+            <div class="relative flex flex-col rounded-lg shadow-lg dark:shadow-none dark:border dark:border-slate-600 bg-white dark:bg-slate-900 p-6 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+              <div class="flex justify-center mb-4">
+                <Icon name={skill.icon} class="bg-primary h-12 w-12 p-3 rounded-full text-white" />
+              </div>
+              <h3 class="font-bold text-lg md:text-xl mb-2">{skill.title}</h3>
+              <p class="text-muted dark:text-slate-400 leading-relaxed">{skill.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA ******************* -->
+
+  <CallToAction
+    id="closing-cta"
+    actions={[
+      { text: 'Request a Quote', href: '/contact', variant: 'primary' },
+    ]}
+  >
+    <Fragment slot="title">Let's Build Something That Lasts</Fragment>
+    <Fragment slot="subtitle">
+      From power generation to road infrastructure to renewable energy — EIKON Guyana Inc. has the engineering
+      expertise and rapid-response capability to deliver. Get in touch to discuss your project.
+    </Fragment>
+  </CallToAction>
+</Layout>
