@@ -2,6 +2,9 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'EIKON Guyana Inc.',
@@ -15,7 +18,6 @@ const metadata = {
   <Hero>
     <Fragment slot="bg">
       <div class="absolute inset-0 overflow-hidden">
-        <!-- Subtle thin red rule at the very top -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-primary"></div>
       </div>
     </Fragment>
@@ -39,10 +41,137 @@ const metadata = {
       </a>
       <a
         href="/services"
-        class="btn w-full sm:w-auto sm:mb-0 font-semibold text-base px-7 py-3.5 text-white border-white/40 hover:bg-white/10 hover:border-white"
+        class="w-full sm:w-auto sm:mb-0 font-semibold text-base px-7 py-3.5 text-white border border-white/40 rounded-full hover:bg-white/10 hover:border-white/80 transition duration-200 ease-in text-center inline-flex items-center justify-center cursor-pointer"
       >
         Our Services
       </a>
     </Fragment>
   </Hero>
+
+  <!-- Services Preview ******************* -->
+
+  <Features
+    id="services-preview"
+    columns={3}
+    items={[
+      {
+        title: 'Power Generation',
+        description:
+          'Installation, maintenance, and rapid-response repair of diesel and natural gas generator systems — backed by Caterpillar Marine Analyst certification and 40+ years of combined experience.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Highway & Road Construction',
+        description:
+          'Full-scope road infrastructure — from site preparation and sub-base to asphalt paving and finishing — built to Guyana\'s national highway standards.',
+        icon: 'tabler:road',
+      },
+      {
+        title: 'Net-Zero Solar & Wind',
+        description:
+          'Grid-tied and off-grid renewable energy systems — solar arrays, wind turbines, and hybrid configurations engineered for Guyana\'s climate and energy needs.',
+        icon: 'tabler:sun',
+      },
+      {
+        title: 'Building Design & Construction',
+        description:
+          'Structural design, civil works, and turnkey building construction — from foundations to finishing — for commercial, industrial, and residential projects.',
+        icon: 'tabler:building',
+      },
+    ]}
+  >
+    <Fragment slot="title">What We Do</Fragment>
+    <Fragment slot="subtitle">
+      Eight integrated service lines covering Guyana's core infrastructure and energy needs.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-slate-900/30"></div>
+    </Fragment>
+  </Features>
+
+  <div class="relative -mt-4 mb-8 text-center">
+    <a
+      href="/services"
+      class="btn btn-primary font-semibold text-base px-7 py-3.5"
+    >
+      View All Services
+    </a>
+  </div>
+
+  <!-- Capability Highlight ******************* -->
+
+  <section id="capability" class="relative not-prose scroll-mt-[72px]">
+    <div class="absolute inset-0 bg-[#141414] pointer-events-none" aria-hidden="true"></div>
+    <div
+      class="relative max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 text-white intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+    >
+      <div class="max-w-4xl mx-auto">
+        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-4">
+          Proof of Capability
+        </p>
+        <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-tighter tracking-tighter mb-6">
+          Generation Supervisory Service<br />for Guyana Power and Light
+        </h2>
+        <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+          EIKON Guyana Inc. provides specialized Generation Supervisory Services to Guyana Power and Light (GPL),
+          leveraging over 40 years of combined experience in electrical power generation and marine analysis. Our
+          team holds Caterpillar Marine Analyst certification, enabling expert-level diagnostics and repair
+          oversight on GPL's generator fleet.
+        </p>
+        <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+          When generator malfunctions threaten grid stability, our rapid-response capability gets qualified
+          personnel on-site fast — diagnosing faults, supervising repairs, and returning units to service with
+          minimal downtime.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10">
+          <div class="border-l-2 border-primary pl-5">
+            <div class="font-heading text-4xl md:text-5xl font-bold text-white">40+</div>
+            <div class="text-sm font-medium uppercase tracking-widest text-gray-400 mt-2">
+              Years Combined Experience
+            </div>
+          </div>
+          <div class="border-l-2 border-primary pl-5">
+            <div class="font-heading text-4xl md:text-5xl font-bold text-white">Cat</div>
+            <div class="text-sm font-medium uppercase tracking-widest text-gray-400 mt-2">
+              Marine Analyst Certified
+            </div>
+          </div>
+          <div class="border-l-2 border-primary pl-5">
+            <div class="font-heading text-4xl md:text-5xl font-bold text-white">24/7</div>
+            <div class="text-sm font-medium uppercase tracking-widest text-gray-400 mt-2">
+              Rapid Response Ready
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip ******************* -->
+
+  <Stats
+    id="stats"
+    stats={[
+      { amount: '40+', title: 'Years Combined Experience' },
+      { amount: '8', title: 'Integrated Service Lines' },
+      { amount: '24/7', title: 'Rapid Response Capability' },
+      { amount: '100%', title: 'Guyana-Focused Operations' },
+    ]}
+  />
+
+  <!-- Closing CTA ******************* -->
+
+  <CallToAction
+    id="closing-cta"
+    actions={[
+      { text: 'Request a Quote', href: '/contact', variant: 'primary' },
+    ]}
+  >
+    <Fragment slot="title">Let's Build Something That Lasts</Fragment>
+    <Fragment slot="subtitle">
+      From power generation to road infrastructure to renewable energy — EIKON Guyana Inc. has the engineering
+      expertise and rapid-response capability to deliver. Get in touch to discuss your project.
+    </Fragment>
+  </CallToAction>
 </Layout>
