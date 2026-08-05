@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -25,16 +25,18 @@ export const footerData = {
     {
       title: 'Solutions',
       links: [
-        { text: 'Power Generation', href: '#' },
-        { text: 'Highway & Road Construction', href: '#' },
-        { text: 'Building Design & Construction', href: '#' },
-        { text: 'Net-Zero Solar & Wind', href: '#' },
-        { text: 'Drainage & Irrigation', href: '#' },
-        { text: 'Water Distribution', href: '#' },
+        { text: 'Power Generation', href: '/services#power-generation' },
+        { text: 'Highway & Road Construction', href: '/services#highway-road-construction' },
+        { text: 'Building Design & Construction', href: '/services#building-design-construction' },
+        { text: 'Net-Zero Solar & Wind', href: '/services#net-zero-solar-wind' },
+        { text: 'Drainage & Irrigation', href: '/services#drainage-irrigation' },
+        { text: 'Water Distribution', href: '/services#water-distribution' },
+        { text: 'Engineering & Design', href: '/services#engineering-design' },
+        { text: 'Project Management', href: '/services#project-management' },
       ],
     },
     {
-      title: 'Resources',
+      title: 'Get in Touch',
       links: [
         { text: 'Request a Quote', href: getPermalink('/contact') },
         { text: 'Terms', href: getPermalink('/terms') },
