@@ -45,10 +45,10 @@ const skills = [
   },
 ];
 
-const gplScope = [
+const partnerScope = [
   {
     title: 'Regular Performance Checks',
-    description: 'Routine inspections and performance monitoring on generating plant and equipment to ensure reliable operation.',
+    description: 'Our partner specialists conduct routine inspections and performance monitoring on generating plant and equipment to ensure reliable operation.',
     icon: 'tabler:gauge',
   },
   {
@@ -58,12 +58,12 @@ const gplScope = [
   },
   {
     title: 'Engine & Auxiliary Calibration',
-    description: 'Calibrating engines and auxiliaries to OEM standards, maintaining performance and reliability across the generator fleet.',
+    description: 'Engines and auxiliaries are calibrated to OEM standards, maintaining performance and reliability across the generator fleet.',
     icon: 'tabler:tools',
   },
   {
     title: 'Immediate Response Capability',
-    description: 'Rapid deployment when generator malfunctions or shutdowns threaten grid stability — diagnosing faults and returning units to service with minimal downtime.',
+    description: 'Rapid deployment when generator malfunctions or shutdowns occur — diagnosing faults and returning units to service with minimal downtime.',
     icon: 'tabler:alert-triangle',
   },
 ];
@@ -85,11 +85,11 @@ const metadata = {
 
     <Fragment slot="title">Capabilities</Fragment>
     <Fragment slot="subtitle">
-      Proven expertise in power generation supervision, backed by decades of hands-on experience.
+      EIKON partners with certified specialists to deliver power generation supervision and technical services across Guyana.
     </Fragment>
   </Hero>
 
-  <!-- GPL Case Study ******************* -->
+  <!-- Partner Capabilities ******************* -->
 
   <section class="relative not-prose scroll-mt-[72px]">
     <Fragment slot="bg">
@@ -97,19 +97,20 @@ const metadata = {
     </Fragment>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
       <div class="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
-        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Case Study</p>
+        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Power Generation Supervision</p>
         <h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tighter leading-tighter mb-4">
-          Generation Supervisory Service<br />for Guyana Power and Light
+          Partnering with Specialists to Keep<br />Guyana's Generators Running
         </h2>
         <p class="text-lg text-muted dark:text-slate-400 leading-relaxed">
-          EIKON Guyana Inc. provides specialized Generation Supervisory Services to Guyana Power and Light (GPL),
-          leveraging over 40 years of combined experience in electrical power generation and marine analysis.
+          EIKON Guyana Inc. works with certified power generation specialists to deliver supervisory services for
+          utility-scale generating plant and equipment — bringing over 40 years of combined experience in electrical
+          power generation and marine analysis to every engagement.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
         {
-          gplScope.map((item) => (
+          partnerScope.map((item) => (
             <div class="relative flex flex-col rounded-lg shadow-lg dark:shadow-none dark:border dark:border-slate-600 bg-white dark:bg-slate-900 p-6 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
               <div class="flex justify-center mb-4">
                 <Icon name={item.icon} class="bg-primary h-12 w-12 p-3 rounded-full text-white" />
@@ -123,14 +124,14 @@ const metadata = {
     </div>
   </section>
 
-  <!-- Key Personnel ******************* -->
+  <!-- Partner Specialists ******************* -->
 
   <section class="relative not-prose scroll-mt-[72px] bg-[#141414]">
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-16 md:py-24">
       <div class="text-center mb-10">
-        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Key Personnel</p>
+        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Partner Specialists</p>
         <h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tighter leading-tighter text-white">
-          Specialists on the Ground
+          The Experts We Work With
         </h2>
       </div>
 
@@ -141,11 +142,11 @@ const metadata = {
           </div>
           <h3 class="font-heading text-xl font-bold text-white mb-2">Celesto Carr</h3>
           <p class="text-primary font-semibold text-sm uppercase tracking-wide mb-3">
-            Electrical Power Generation and Marine Analyst Contractor
+            Electrical Power Generation and Marine Analyst
           </p>
           <p class="text-gray-300 leading-relaxed">
-            Provides expert-level diagnostics and repair oversight on GPL's generator fleet, backed by Caterpillar
-            Marine Analyst certification.
+            Provides expert-level diagnostics and repair oversight on generating plant and equipment, backed by
+            Caterpillar Marine Analyst certification.
           </p>
         </div>
 
@@ -172,7 +173,7 @@ const metadata = {
       <div class="text-center mb-10">
         <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Certifications</p>
         <h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tighter leading-tighter">
-          Factory-Trained &amp; Certified
+          Factory-Trained &amp; Certified Partners
         </h2>
       </div>
 
@@ -226,8 +227,8 @@ const metadata = {
   >
     <Fragment slot="title">Let's Build Something That Lasts</Fragment>
     <Fragment slot="subtitle">
-      From power generation to road infrastructure to renewable energy — EIKON Guyana Inc. has the engineering
-      expertise and rapid-response capability to deliver. Get in touch to discuss your project.
+      From power generation supervision to road infrastructure to renewable energy — EIKON Guyana Inc. partners
+      with certified specialists to deliver. Get in touch to discuss your project.
     </Fragment>
   </CallToAction>
 </Layout>
