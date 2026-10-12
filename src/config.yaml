@@ -11,7 +11,7 @@ metadata:
   title:
     default: EIKON Guyana Inc.
     template: '%s — EIKON Guyana Inc.'
-  description: 'Engineering, construction, and green energy solutions across Guyana — power generation, highway & road construction, building design, net-zero solar & wind, drainage & irrigation, and water distribution.'
+  description: 'Engineering, construction, and energy solutions across Guyana — power generation, highway & road construction, building design, net-zero solar & wind, drainage & irrigation, and water distribution.'
   robots:
     index: true
     follow: true

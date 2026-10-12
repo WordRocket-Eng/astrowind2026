@@ -122,7 +122,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                   href={href}
                 >
                   {text}
-                  <span class="absolute bottom-1 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  <span class="absolute bottom-1 left-4 right-4 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 </a>
               )}
             </li>
@@ -168,13 +168,18 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 </header>
 
 <style>
-  /* Transparent state: white text over hero */
+  #header > div:first-child {
+    background-color: rgb(255 255 255 / 96%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0.25rem 1.25rem 0 rgb(20 20 20 / 8%);
+  }
   #header:not(.scroll):not(.expanded) {
-    color: rgb(255 255 255);
+    color: rgb(20 20 20);
   }
   #header:not(.scroll):not(.expanded) :global(.text-gray-900),
   #header:not(.scroll):not(.expanded) :global(.text-muted) {
-    color: rgb(255 255 255) !important;
+    color: rgb(20 20 20) !important;
   }
   #header:not(.scroll):not(.expanded) :global(.aw-link-active) {
     color: rgb(225 45 45) !important;
@@ -223,8 +228,11 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     overflow-y: auto;
   }
 
-  /* Dark mode overrides for transparent header on dark hero */
   #header.dark:not(.scroll):not(.expanded) {
-    color: rgb(248 248 248);
+    color: rgb(20 20 20);
+  }
+  #header.dark:not(.scroll):not(.expanded) :global(.text-gray-900),
+  #header.dark:not(.scroll):not(.expanded) :global(.text-muted) {
+    color: rgb(20 20 20) !important;
   }
 </style>

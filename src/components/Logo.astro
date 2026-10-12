@@ -2,8 +2,12 @@
 import { SITE } from 'astrowind:config';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-lg md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white font-heading tracking-tight"
->
-  {SITE?.name}
+<span class="relative block h-10 w-36 overflow-hidden bg-white" aria-label={SITE?.name}>
+  <img
+    src="/images/1.png"
+    alt="EIKON Guyana Inc."
+    class="absolute left-0 top-[-1.8rem] h-36 w-36 max-w-none object-contain"
+    width="144"
+    height="144"
+  />
 </span>

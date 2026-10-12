@@ -25,7 +25,11 @@ const metadata = {
     font-weight: 600;
     line-height: 1.375;
     text-align: center;
-    transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, transform 200ms ease;
+    transition:
+      background-color 200ms ease,
+      border-color 200ms ease,
+      color 200ms ease,
+      transform 200ms ease;
   }
 
   :global(.eikon-hero-primary) {
@@ -54,6 +58,38 @@ const metadata = {
     transform: translateY(-2px);
   }
 
+  .eikon-image-card {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 1rem 2.5rem rgb(20 20 20 / 12%);
+    transition:
+      transform 240ms ease,
+      box-shadow 240ms ease;
+  }
+
+  .eikon-image-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1.5rem 3rem rgb(20 20 20 / 20%);
+  }
+
+  .eikon-image-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(20 20 20 / 5%) 20%, rgb(20 20 20 / 88%) 100%);
+    transition: background 240ms ease;
+  }
+
+  .eikon-image-card:hover .eikon-image-card-overlay {
+    background: linear-gradient(180deg, rgb(20 20 20 / 12%) 10%, rgb(20 20 20 / 92%) 100%);
+  }
+
   @media (min-width: 640px) {
     :global(.eikon-hero-primary),
     :global(.eikon-hero-secondary) {
@@ -71,28 +107,25 @@ const metadata = {
         class="absolute inset-0 bg-cover bg-center opacity-35"
         style="background-image: url('https://images.pexels.com/photos/5235481/pexels-photo-5235481.jpeg?auto=compress&cs=tinysrgb&w=1920')"
         aria-hidden="true"
-      ></div>
+      >
+      </div>
       <div class="absolute inset-0 bg-gradient-to-b from-[#141414]/80 via-[#141414]/90 to-[#141414]"></div>
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-primary"></div>
     </Fragment>
 
     <Fragment slot="title">
-      Innovative Ideas,<br />Solutions & Results
+      Engineering Guyana's Future.<br />Powering Global Partnerships.
     </Fragment>
 
     <Fragment slot="subtitle">
-      EIKON Guyana Inc. delivers engineering, construction, and energy solutions across Guyana — from
-      power generation and highway construction to building design, net-zero solar and wind systems, drainage
-      and irrigation, and water distribution.
+      EIKON Guyana Inc. delivers engineering, construction, and energy solutions across Guyana — from power generation
+      and highway construction to building design, net-zero solar and wind systems, drainage and irrigation, and water
+      distribution.
     </Fragment>
 
     <Fragment slot="actions">
-      <a href="/contact" class="eikon-hero-primary">
-        Request a Quote
-      </a>
-      <a href="/services" class="eikon-hero-secondary">
-        Our Services
-      </a>
+      <a href="/contact" class="eikon-hero-primary"> Request a Quote </a>
+      <a href="/services" class="eikon-hero-secondary"> Our Services </a>
     </Fragment>
   </Hero>
 
@@ -105,19 +138,19 @@ const metadata = {
       {
         title: 'Power Generation',
         description:
-          'Installation, maintenance, and rapid-response repair of diesel and natural gas generator systems — backed by Caterpillar Marine Analyst certification and 40+ years of combined experience.',
+          'The configuration, sourcing, supply and installation of power systems for generation, transmission and distribution and grid maintenance.',
         icon: 'tabler:bolt',
       },
       {
         title: 'Highway & Road Construction',
         description:
-          'Full-scope road infrastructure — from site preparation and sub-base to asphalt paving and finishing — built to Guyana\'s national highway standards.',
+          "Full-scope road infrastructure — from site preparation and sub-base to asphalt paving and finishing — built to Guyana's national highway standards.",
         icon: 'tabler:road',
       },
       {
         title: 'Net-Zero Solar & Wind',
         description:
-          'Grid-tied and off-grid renewable energy systems — solar arrays, wind turbines, and hybrid configurations engineered for Guyana\'s climate and energy needs.',
+          "Grid-tied and off-grid renewable energy systems — solar arrays, wind turbines, and hybrid configurations engineered for Guyana's climate and energy needs.",
         icon: 'tabler:sun',
       },
       {
@@ -133,43 +166,110 @@ const metadata = {
       Eight integrated service lines covering Guyana's core infrastructure and energy needs.
     </Fragment>
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-gray-50 dark:bg-slate-900/30 border-t border-gray-200 dark:border-slate-700"></div>
+      <div class="absolute inset-0 bg-gray-50 dark:bg-slate-900/30 border-t border-gray-200 dark:border-slate-700">
+      </div>
     </Fragment>
   </Features>
 
   <div class="relative -mt-4 mb-8 text-center">
-    <a
-      href="/services"
-      class="btn btn-primary font-semibold text-base px-7 py-3.5"
-    >
-      View All Services
-    </a>
+    <a href="/services" class="btn btn-primary font-semibold text-base px-7 py-3.5"> View All Services </a>
   </div>
+
+  <!-- Visual Service Paths ******************* -->
+
+  <section
+    class="relative not-prose overflow-hidden border-y border-gray-200 bg-[#f7f7f5] dark:border-slate-700 dark:bg-[#181818]"
+  >
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between mb-10 md:mb-12">
+        <div class="max-w-2xl">
+          <p class="text-primary font-bold tracking-[0.18em] uppercase text-xs mb-3">Built for the Work Ahead</p>
+          <h2 class="font-heading text-3xl md:text-5xl font-bold tracking-tighter leading-tight">
+            From essential infrastructure to new possibilities.
+          </h2>
+        </div>
+        <p class="max-w-md text-muted dark:text-slate-400 leading-relaxed md:text-right">
+          One team for the systems, structures, and energy solutions that keep Guyana moving forward.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+        <a
+          href="/services#power-generation"
+          class="eikon-image-card group min-h-[320px] md:min-h-[390px]"
+          style="background-image: url('https://images.pexels.com/photos/9989522/pexels-photo-9989522.jpeg?auto=compress&cs=tinysrgb&w=1200')"
+        >
+          <span class="eikon-image-card-overlay"></span>
+          <span class="relative z-10 mt-auto block">
+            <span class="text-primary text-xs font-bold uppercase tracking-[0.18em]">Energy Systems</span>
+            <span class="mt-2 block font-heading text-2xl font-bold text-white">Power that stays ready.</span>
+            <span
+              class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white/85 transition group-hover:gap-3"
+              >Explore power generation <span aria-hidden="true">→</span></span
+            >
+          </span>
+        </a>
+        <a
+          href="/services#highway-road-construction"
+          class="eikon-image-card group min-h-[320px] md:min-h-[390px]"
+          style="background-image: url('https://images.pexels.com/photos/12230651/pexels-photo-12230651.jpeg?auto=compress&cs=tinysrgb&w=1200')"
+        >
+          <span class="eikon-image-card-overlay"></span>
+          <span class="relative z-10 mt-auto block">
+            <span class="text-primary text-xs font-bold uppercase tracking-[0.18em]">Civil Works</span>
+            <span class="mt-2 block font-heading text-2xl font-bold text-white">Infrastructure with purpose.</span>
+            <span
+              class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white/85 transition group-hover:gap-3"
+              >Explore construction <span aria-hidden="true">→</span></span
+            >
+          </span>
+        </a>
+        <a
+          href="/services#engineering-design"
+          class="eikon-image-card group min-h-[320px] md:min-h-[390px]"
+          style="background-image: url('https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1200')"
+        >
+          <span class="eikon-image-card-overlay"></span>
+          <span class="relative z-10 mt-auto block">
+            <span class="text-primary text-xs font-bold uppercase tracking-[0.18em]">Engineering</span>
+            <span class="mt-2 block font-heading text-2xl font-bold text-white">Ideas made practical.</span>
+            <span
+              class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white/85 transition group-hover:gap-3"
+              >Explore engineering <span aria-hidden="true">→</span></span
+            >
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Capability Highlight ******************* -->
 
-  <section id="capability" class="relative not-prose scroll-mt-[72px]">
-    <div class="absolute inset-0 bg-[#141414] pointer-events-none" aria-hidden="true"></div>
+  <section id="capability" class="relative not-prose scroll-mt-[72px] overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-25"
+      style="background-image: url('https://images.pexels.com/photos/9720534/pexels-photo-9720534.jpeg?auto=compress&cs=tinysrgb&w=1600')"
+      aria-hidden="true"
+    >
+    </div>
+    <div class="absolute inset-0 bg-[#141414]/90 pointer-events-none" aria-hidden="true"></div>
     <div
       class="relative max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 text-white intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
     >
       <div class="max-w-4xl mx-auto">
-        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-4">
-          Specialist Expertise
-        </p>
+        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-4">Specialist Expertise</p>
         <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-tighter tracking-tighter mb-6">
           Power Generation Supervision —<br />Delivered with Certified Specialists
         </h2>
         <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
-          EIKON Guyana Inc. partners with certified power generation specialists to deliver supervisory services
-          for utility-scale generating plant and equipment — leveraging over 40 years of combined experience in
-          electrical power generation and marine analysis. Our partner specialists hold Caterpillar Marine Analyst
-          certification, enabling expert-level diagnostics and repair oversight on critical generator infrastructure.
+          EIKON Guyana Inc. partners with certified power generation specialists to deliver supervisory services for
+          utility-scale generating plant and equipment — leveraging over 40 years of combined experience in electrical
+          power generation and marine analysis. Our partner specialists hold Caterpillar Marine Analyst certification,
+          enabling expert-level diagnostics and repair oversight on critical generator infrastructure.
         </p>
         <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
-          When generator malfunctions or shutdowns occur, our rapid-response capability gets qualified personnel
-          on-site fast — diagnosing faults, supervising repairs, and returning units to service with minimal
-          downtime.
+          When generator malfunctions or shutdowns occur, our rapid-response capability gets qualified personnel on-site
+          fast — diagnosing faults, supervising repairs, and returning units to service with minimal downtime.
         </p>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10">
@@ -181,15 +281,11 @@ const metadata = {
           </div>
           <div class="border-l-2 border-primary pl-5">
             <div class="font-heading text-4xl md:text-5xl font-bold text-white">Cat</div>
-            <div class="text-sm font-medium uppercase tracking-widest text-gray-400 mt-2">
-              Marine Analyst Certified
-            </div>
+            <div class="text-sm font-medium uppercase tracking-widest text-gray-400 mt-2">Marine Analyst Certified</div>
           </div>
           <div class="border-l-2 border-primary pl-5">
             <div class="font-heading text-4xl md:text-5xl font-bold text-white">24/7</div>
-            <div class="text-sm font-medium uppercase tracking-widest text-gray-400 mt-2">
-              Rapid Response Ready
-            </div>
+            <div class="text-sm font-medium uppercase tracking-widest text-gray-400 mt-2">Rapid Response Ready</div>
           </div>
         </div>
       </div>
@@ -210,16 +306,11 @@ const metadata = {
 
   <!-- Closing CTA ******************* -->
 
-  <CallToAction
-    id="closing-cta"
-    actions={[
-      { text: 'Request a Quote', href: '/contact', variant: 'primary' },
-    ]}
-  >
+  <CallToAction id="closing-cta" actions={[{ text: 'Request a Quote', href: '/contact', variant: 'primary' }]}>
     <Fragment slot="title">Let's Build Something That Lasts</Fragment>
     <Fragment slot="subtitle">
-      From power generation supervision to road infrastructure to renewable energy — EIKON Guyana Inc. partners
-      with certified specialists to deliver. Get in touch to discuss your project.
+      From power generation supervision to road infrastructure to renewable energy — EIKON Guyana Inc. partners with
+      certified specialists to deliver. Get in touch to discuss your project.
     </Fragment>
   </CallToAction>
 </Layout>
