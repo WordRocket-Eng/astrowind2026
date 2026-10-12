@@ -40,6 +40,22 @@ const metadata = {
     description="Our support team typically responds within 24 business hours."
   />
 
+  <section class="relative not-prose overflow-hidden bg-[#141414]">
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-30"
+      style="background-image: url('https://images.pexels.com/photos/532562/pexels-photo-532562.jpeg?auto=compress&cs=tinysrgb&w=1600')"
+      aria-hidden="true"
+    ></div>
+    <div class="absolute inset-0 bg-[#141414]/75"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center text-white">
+      <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Visit EIKON</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tighter mb-3">Let’s Talk About Your Next Project</h2>
+      <p class="max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
+        Reach the EIKON team by phone, email, or at our Georgetown office.
+      </p>
+    </div>
+  </section>
+
   <!-- Features2 Widget ************** -->
 
   <Features2
@@ -47,7 +63,8 @@ const metadata = {
     items={[
       {
         title: 'Phone',
-        description: '<a href="tel:+5926233899" class="hover:text-primary transition-colors">+592 623 3899</a>',
+        description:
+          '<div class="space-y-1"><a href="tel:+5926233899" class="block hover:text-primary transition-colors">+592 623 3899</a><a href="tel:+5926239645" class="block hover:text-primary transition-colors">+592 623 9645</a><a href="tel:+5926247471" class="block hover:text-primary transition-colors">+592 624 7471</a></div>',
         icon: 'tabler:phone',
       },
       {

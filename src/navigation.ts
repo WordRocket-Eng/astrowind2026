@@ -38,6 +38,9 @@ export const footerData = {
     {
       title: 'Get in Touch',
       links: [
+        { text: 'Call +592 623 3899', href: 'tel:+5926233899' },
+        { text: 'Call +592 623 9645', href: 'tel:+5926239645' },
+        { text: 'Call +592 624 7471', href: 'tel:+5926247471' },
         { text: 'Request a Quote', href: getPermalink('/contact') },
         { text: 'Terms', href: getPermalink('/terms') },
         { text: 'Privacy Policy', href: getPermalink('/privacy') },

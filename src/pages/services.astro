@@ -14,9 +14,13 @@ const metadata = {
 
   <Hero>
     <Fragment slot="bg">
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-primary"></div>
-      </div>
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-30"
+        style="background-image: url('https://images.pexels.com/photos/12230651/pexels-photo-12230651.jpeg?auto=compress&cs=tinysrgb&w=1600')"
+        aria-hidden="true"
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#141414]/80 via-[#141414]/90 to-[#141414]"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-primary"></div>
     </Fragment>
 
     <Fragment slot="title">Services</Fragment>

@@ -68,6 +68,24 @@ const partnerScope = [
   },
 ];
 
+const resourceTeam = [
+  {
+    name: 'Uncle Ravie',
+    role: 'Resource Team Member',
+    description: 'Additional resource-team support available through EIKON. Professional profile pending CV details.',
+  },
+  {
+    name: 'Rory Ramdas',
+    role: 'Mechanical Engineer',
+    description: 'Mechanical engineering resource supporting EIKON projects. Professional profile pending CV details.',
+  },
+  {
+    name: 'Navindra Lall',
+    role: 'Civil Engineer',
+    description: 'Civil engineering resource supporting EIKON projects. Professional profile pending CV details.',
+  },
+];
+
 const metadata = {
   title: 'Capabilities',
 };
@@ -78,9 +96,13 @@ const metadata = {
 
   <Hero>
     <Fragment slot="bg">
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-primary"></div>
-      </div>
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-30"
+        style="background-image: url('https://images.pexels.com/photos/9989522/pexels-photo-9989522.jpeg?auto=compress&cs=tinysrgb&w=1600')"
+        aria-hidden="true"
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#141414]/80 via-[#141414]/90 to-[#141414]"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-primary"></div>
     </Fragment>
 
     <Fragment slot="title">Capabilities</Fragment>
@@ -162,6 +184,38 @@ const metadata = {
             Brings 38 years of hands-on experience in mechanical and electrical power generator systems.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resource Team ******************* -->
+
+  <section class="relative not-prose scroll-mt-[72px] border-t border-gray-200 dark:border-slate-700">
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+      <div class="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
+        <p class="text-primary font-bold tracking-wide uppercase text-sm mb-3">Resource Team</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold tracking-tighter leading-tighter mb-4">
+          Additional Engineering Resources
+        </h2>
+        <p class="text-lg text-muted dark:text-slate-400 leading-relaxed">
+          EIKON is building a broader resource team to support engineering, construction, and infrastructure work.
+          Detailed biographies and qualifications will be added as CVs are received and confirmed.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        {
+          resourceTeam.map((member) => (
+            <div class="rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 p-6 md:p-8 text-center shadow-lg dark:shadow-none">
+              <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-5">
+                <Icon name="tabler:user-plus" class="w-8 h-8 text-white" />
+              </div>
+              <h3 class="font-heading text-xl font-bold mb-2">{member.name}</h3>
+              <p class="text-primary font-semibold text-sm uppercase tracking-wide mb-3">{member.role}</p>
+              <p class="text-muted dark:text-slate-400 leading-relaxed">{member.description}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
