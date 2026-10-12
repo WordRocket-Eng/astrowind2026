@@ -104,14 +104,34 @@ const metadata = {
   <Hero>
     <Fragment slot="bg">
       <div
-        class="absolute inset-0 bg-cover bg-center opacity-35"
+        class="absolute inset-0 bg-cover bg-center opacity-60"
         style="background-image: url('https://images.pexels.com/photos/5235481/pexels-photo-5235481.jpeg?auto=compress&cs=tinysrgb&w=1920')"
         aria-hidden="true"
       >
       </div>
-      <div class="absolute inset-0 bg-gradient-to-b from-[#141414]/80 via-[#141414]/90 to-[#141414]"></div>
+      <div
+        class="absolute inset-0"
+        style="background: radial-gradient(120% 90% at 50% 45%, rgb(20 20 20 / 0.96) 0%, rgb(20 20 20 / 0.82) 38%, rgb(20 20 20 / 0.55) 70%, rgb(20 20 20 / 0.35) 100%);"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="absolute left-1/2 top-[42%] h-[420px] w-[680px] max-w-[90vw] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+        style="background: radial-gradient(closest-side, rgb(225 45 45 / 0.22), transparent 70%);"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="absolute inset-0 opacity-[0.06]"
+        style="background-image: linear-gradient(rgb(255 255 255 / 0.6) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 0.6) 1px, transparent 1px); background-size: 64px 64px;"
+        aria-hidden="true"
+      >
+      </div>
+      <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[#141414]"></div>
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-[3px] bg-primary"></div>
     </Fragment>
+
+    <Fragment slot="tagline">Engineering · Construction · Energy</Fragment>
 
     <Fragment slot="title">
       Engineering Guyana's Future.<br />Powering Global Partnerships.
